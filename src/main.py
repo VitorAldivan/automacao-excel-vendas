@@ -3,94 +3,38 @@ from processador import (
     limpar_dados,
     gerar_resumos,
     gerar_kpis,
-    salvar_relatorio
+    salvar_relatorio,
+    exportar_powerbi
 )
 
-from formatador import (
-    formatar_excel
-)
+from formatador import formatar_excel
+from dashboard import criar_dashboard
+from logger import registrar_log
 
-from dashboard import (
-    criar_dashboard
-)
-
-from logger import (
-    registrar_log
-)
-
-from config import (
-    ARQUIVO_SAIDA
-)
+from config import ARQUIVO_SAIDA
 
 
 def main():
 
-    registrar_log(
-        "Iniciando processamento"
-    )
-
-    print(
-        "Lendo arquivo CSV..."
-    )
+    registrar_log("Iniciando processamento")
 
     df = carregar_dados()
-
-    print(
-        "Limpando dados..."
-    )
-
     df = limpar_dados(df)
 
-    print(
-        "Gerando resumos..."
-    )
-
-    categoria, regiao, produtos = (
-        gerar_resumos(df)
-    )
-
-    print(
-        "Gerando KPIs..."
-    )
-
+    categoria, regiao, produtos = gerar_resumos(df)
     kpis = gerar_kpis(df)
 
-    print(
-        "Salvando relatório..."
-    )
+    salvar_relatorio(df, categoria, regiao, produtos, kpis)
+    formatar_excel(ARQUIVO_SAIDA)
 
-    salvar_relatorio(
-        df,
-        categoria,
-        regiao,
-        produtos,
-        kpis
-    )
+    criar_dashboard(ARQUIVO_SAIDA, kpis)
 
-    print(
-        "Formatando relatório..."
-    )
+    # 🔥 POWER BI
+    exportar_powerbi(df)
 
-    formatar_excel(
-        ARQUIVO_SAIDA
-    )
+    registrar_log(f"Relatório gerado com {len(df)} registros")
 
-    print(
-        "Criando dashboard..."
-    )
-
-    criar_dashboard(
-        ARQUIVO_SAIDA,
-        kpis
-    )
-
-    registrar_log(
-        f"Relatório gerado com {len(df)} registros"
-    )
-
-    print(
-        "\nRelatório criado com sucesso!"
-    )
+    print("\nRelatório criado com sucesso!")
 
 
 if __name__ == "__main__":
