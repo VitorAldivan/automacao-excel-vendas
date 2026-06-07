@@ -29,7 +29,6 @@ def main():
 
     criar_dashboard(ARQUIVO_SAIDA, kpis)
 
-    # 🔥 POWER BI
     exportar_powerbi(df)
 
     registrar_log(f"Relatório gerado com {len(df)} registros")
