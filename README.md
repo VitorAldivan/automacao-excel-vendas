@@ -84,27 +84,31 @@ automacao_excel_pedidos/
 
 O dashboard foi dividido em três páginas:
 
-### Página 1 - Visão Geral
+### Página 1 - Indicadores Gerais
 
-* Faturamento por Categoria
-* Faturamento por Subcategoria
-* Top 10 Produtos
-* Top 10 Clientes
-* Indicadores principais
+* Faturamento Total
+* Total de Pedidos
+* Clientes Únicos
+* Ticket Médio por Pedido
+* Ticket Médio
+* Maior Venda
 
 ### Página 2 - Análise Temporal
 
-* Faturamento ao longo do tempo
-* Vendas por mês
-* Clientes ao longo do tempo
-* Faturamento por modo de envio
-
-### Página 3 - Clientes e Logística
-
-* Clientes por Região
+* Faturamento ao Longo do Tempo
+* Vendas por Mês
+* Faturamento por Região
+* Clientes ao Longo do Tempo
 * Quantidade de Pedidos por Modo de Envio
-* Distribuição de clientes
-* Indicadores complementares
+* Faturamento por Modo de Envio
+
+### Página 3 - Produtos, Categorias e Clientes
+
+* Faturamento por Categoria
+* Faturamento por Subcategoria
+* Top 10 Clientes
+* Clientes por Região
+* Top 10 Produtos
 
 ---
 
@@ -138,20 +142,25 @@ data/saida/
 
 ### Dashboard Power BI - Página 1
 
-<img width="565" height="317" alt="Captura de tela 2026-06-06 222730" src="https://github.com/user-attachments/assets/3078f041-1c1e-46fe-8fc2-f5a942790fbf" />
-
+<img width="364" height="284" alt="Captura de tela 2026-06-06 222341" src="https://github.com/user-attachments/assets/3d37b30a-3cc4-4145-b348-c052709cd0b5" />
 
 ### Dashboard Power BI - Página 2
 
-<img width="565" height="317" alt="Captura de tela 2026-06-06 222826" src="https://github.com/user-attachments/assets/8812d42d-23cd-48bb-b8e7-c9ab3f4fdd10" />
-
+<img width="565" height="317" alt="Captura de tela 2026-06-06 222730" src="https://github.com/user-attachments/assets/928b0c62-7a36-4390-8e5e-a42c3f882e7e" />
 
 ### Dashboard Power BI - Página 3
 
-<img width="175" height="294" alt="Captura de tela 2026-06-06 223339" src="https://github.com/user-attachments/assets/a5c0a7f3-e2fe-408e-94c6-a1386b41a1f8" />
-
+<img width="566" height="316" alt="Captura de tela 2026-06-06 225411" src="https://github.com/user-attachments/assets/968a3328-6d9e-41c4-9be1-3aa1997d059b" />
 
 ---
+
+## 📊 Relatório Excel
+
+Além do dashboard em Power BI, o projeto gera automaticamente um relatório em Excel contendo:
+
+
+<img width="378" height="238" alt="Captura de tela 2026-06-06 222142" src="https://github.com/user-attachments/assets/1811a1b5-b426-47ca-b390-2d7811d8b398" />
+
 
 ## 👨‍💻 Autor
 
